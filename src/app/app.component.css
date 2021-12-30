@@ -11,7 +11,7 @@
 }
 
 .cell:first-child {
-  border-left-width: 1px;
+  border-left-width: 6px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
