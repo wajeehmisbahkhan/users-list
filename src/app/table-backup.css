@@ -1,0 +1,52 @@
+:host {
+  font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: table;
+  flex-direction: column;
+  min-width: 1200px;
+  /* border-collapse: collapse; */
+  border-spacing: 1em;
+}
+
+.user {
+  display: table-row;
+  border-radius: 3px;
+  border: 1px solid gray;
+  border-left-width: 6px;
+}
+
+.user > div {
+  /* min-width: 200px; */
+  display: table-cell;
+}
+
+.user > div.avatar-cell {
+  /* min-width: 80px; */
+  text-align: center;
+  vertical-align: middle;
+}
+
+.user > div.active-cell {
+  text-align: center;
+}
+
+.user > div > h1 {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: rgb(56, 115, 246);
+  font-weight: normal;
+}
+
+.user > div > p {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.user > div > p.subtitle {
+  font-size: 12px;
+  font-weight: normal;
+  color: gray;
+  margin: 0;
+}

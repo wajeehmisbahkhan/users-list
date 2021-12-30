@@ -1,0 +1,32 @@
+<div class="user" *ngFor="let user of users">
+  <div class="cell avatar-cell">
+    <p-avatar
+      label="V"
+      styleClass="p-mr-2"
+      size="large"
+      [style]="{ 'background-color': '#2196F3', color: '#ffffff' }"
+      shape="circle"
+    ></p-avatar>
+  </div>
+  <div class="cell username-cell">
+    <h1>User Name</h1>
+    <p>{{ user.username }}</p>
+    <p class="subtitle">Last logged in on {{ user.lastLogin | date }}</p>
+  </div>
+  <div class="cell fullname-cell">
+    <h1>Full Name</h1>
+    <p>{{ user.name }}</p>
+  </div>
+  <div class="cell group-cell">
+    <h1>Group</h1>
+    <p>{{ user.group }}</p>
+  </div>
+  <div class="cell email-cell">
+    <h1>Email</h1>
+    <p>{{ user.email }}</p>
+  </div>
+  <div class="cell active-cell">
+    <h1>Active</h1>
+    <p-checkbox [value]="user.active"></p-checkbox>
+  </div>
+</div>

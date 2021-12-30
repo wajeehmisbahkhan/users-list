@@ -1,0 +1,65 @@
+:host {
+  font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: grid;
+  min-width: 1000px;
+  grid-template-columns: 0.35fr repeat(4, 1fr) 0.35fr;
+  grid-row-gap: 0.5rem;
+}
+
+.user {
+  display: contents;
+}
+
+.cell:first-child {
+  border-left-width: 1px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.cell {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  border-width: 0px;
+  border-style: solid;
+  border-color: gray;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+.cell:last-child {
+  border-right-width: 1px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.cell.avatar-cell,
+.cell.active-cell {
+  align-items: center;
+}
+
+.cell.avatar-cell {
+  justify-content: center;
+}
+
+.cell > h1 {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: rgb(56, 115, 246);
+  font-weight: normal;
+}
+
+.cell > p {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.cell > p.subtitle {
+  font-size: 12px;
+  font-weight: normal;
+  color: gray;
+  margin: 0;
+}
