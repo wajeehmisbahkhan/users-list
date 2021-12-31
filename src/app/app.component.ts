@@ -8,6 +8,7 @@ import { name, datatype, helpers, random } from 'faker';
 })
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
+  selectedUser: User | null = null;
   users: User[] = [];
 
   constructor() {
