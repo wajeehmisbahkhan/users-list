@@ -9,13 +9,7 @@ import { AvatarModule } from 'primeng/avatar';
 import { CheckboxModule } from 'primeng/checkbox';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    FormsModule,
-    TableModule,
-    AvatarModule,
-    CheckboxModule,
-  ],
+  imports: [BrowserModule, FormsModule, AvatarModule, CheckboxModule],
   declarations: [AppComponent, HelloComponent],
   bootstrap: [AppComponent],
 })

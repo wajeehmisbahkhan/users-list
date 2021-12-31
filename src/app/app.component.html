@@ -1,4 +1,5 @@
-<div class="user" *ngFor="let user of users">
+<div class="user" [class.selected]="user === selectedUser" *ngFor="let user of users">
+  <div (click)="selectedUser = user" class="cell handle-cell"></div>
   <div class="cell avatar-cell">
     <p-avatar
       label="V"
@@ -27,6 +28,10 @@
   </div>
   <div class="cell active-cell">
     <h1>Active</h1>
-    <p-checkbox [value]="user.active" [(ngModel)]="user.active"></p-checkbox>
+    <p-checkbox
+      [name]="'check_' + user.id"
+      [value]="user.active"
+      (ngModelChange)="changeUserActive($event)"
+    ></p-checkbox>
   </div>
 </div>

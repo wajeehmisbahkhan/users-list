@@ -25,6 +25,10 @@ export class AppComponent {
       });
     }
   }
+
+  changeUserActive(event: Event) {
+    console.log(event);
+  }
 }
 
 interface User {

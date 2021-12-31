@@ -1,18 +1,12 @@
 :host {
   font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
   display: grid;
-  grid-template-columns: 0.35fr repeat(4, 1fr) 0.35fr;
+  grid-template-columns: 0fr 0.35fr repeat(4, 1fr) 0.35fr;
   grid-row-gap: 0.5rem;
 }
 
 .user {
   display: contents;
-}
-
-.cell:first-child {
-  border-left-width: 6px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
 }
 
 .cell {
@@ -26,21 +20,41 @@
   border-bottom-width: 1px;
 }
 
+.selected.user .cell {
+  transition: border 300ms;
+  border-color: rgb(56, 115, 246);
+}
+
+.cell:first-child {
+  border-left-width: 8px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
 .cell:last-child {
   border-right-width: 1px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
-.cell.avatar-cell,
-.cell.active-cell {
-  align-items: center;
+.cell.handle-cell {
+  padding: 0;
+  cursor: pointer;
+}
+
+.cell.handle-cell:hover {
+  border-color: rgb(122, 176, 244);
 }
 
 .cell.avatar-cell {
   justify-content: center;
   padding-left: 2rem;
   padding-right: 5rem;
+}
+
+.cell.avatar-cell,
+.cell.active-cell {
+  align-items: center;
 }
 
 .cell > h1 {
